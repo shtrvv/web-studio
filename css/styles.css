@@ -655,6 +655,11 @@ address {
   }
 }
 @media only screen and (min-width: 1158px) {
+  .filtration-section .container {
+    padding: 0 15px;
+  }
+}
+@media only screen and (min-width: 1158px) {
   .filtration-section {
     padding-top: 100px;
     padding-bottom: 120px;
@@ -739,6 +744,7 @@ address {
   .production-card {
     border: none;
     box-shadow: none;
+    margin: 0;
   }
 }
 .products-img {
@@ -823,20 +829,22 @@ address {
     display: flex;
     flex-direction: column;
     gap: 72px;
-    margin: 0 auto;
-    padding: 0;
 }
 @media only screen and (min-width: 768px) {
   .footer-container {
     flex-direction: row;
-    align-items: baseline;
     flex-wrap: wrap;
-    gap: 0;
+    width: 584px;
+    row-gap: 72px;
+    column-gap: 24px;
   }
 }
 @media only screen and (min-width: 1158px) {
   .footer-container {
+    align-items: baseline;
+    gap: 0;
     flex-wrap: nowrap;
+    width: 1158px;
   }
 }
 .logo-wrap {
@@ -846,13 +854,11 @@ address {
 @media only screen and (min-width: 768px) {
   .logo-wrap {
     margin: 0;
-    margin-left: 108px;
     text-align: left;
   }
 }
 @media only screen and (min-width: 1158px) {
   .logo-wrap {
-    margin-left: 0;
     margin-right: 120px;
   }
 }
@@ -882,13 +888,11 @@ address {
 @media only screen and (min-width: 768px) {
   .social-wrap {
     margin: 0;
-    margin-left: 24px;
     text-align: left;
   }
 }
 @media only screen and (min-width: 1158px) {
   .social-wrap {
-    margin-left: 0;
     margin-right: 80px;
   }
 }
@@ -937,8 +941,6 @@ address {
 @media only screen and (min-width: 768px) {
   .form-wrap {
     margin: 0;
-    margin-left: 108px;
-    margin-top: 72px;
     text-align: left;
   }
 }
@@ -981,7 +983,7 @@ address {
 }
 @media only screen and (max-width: 410px) {
   .subscribe-input {
-    width: 100%;
+    width: 285px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -1048,6 +1050,7 @@ address {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
+    max-width: 100%;
     width: 392px;
     min-height: 584px;
     border-radius: 4px;
@@ -1270,6 +1273,8 @@ address {
     stroke: var(--navy-blue-color);
 }
 .menu-container {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
@@ -1309,7 +1314,7 @@ address {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-bottom: 284px;
+    margin-bottom: auto;
 }
 .mobile-menu-nav .link {
     font-size: 36px;
@@ -1330,7 +1335,7 @@ address {
 }
 .mobile-menu-contacts .tel {
     font-weight: 700;
-    font-size: 36px;
+    font-size: 26px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
@@ -1347,9 +1352,15 @@ address {
     display: flex;
     gap: 56px;
 }
+@media only screen and (max-width: 400px) {
+  .mobile-menu-socials {
+    gap: 36px;
+  }
+}
 .menu-socials-item {
     width: 40px;
     height: 40px;
+    flex-shrink: 0;
 }
 .menu-socials-link {
     display: flex;

@@ -30,9 +30,7 @@
           >
           <ul class="nav-links list">
             <li><a class="nav-item link" href="./index.html">Studio</a></li>
-            <li>
-              <a class="nav-item active link" href="./portfolio.html">Portfolio</a>
-            </li>
+            <li><a class="nav-item active link" href="./portfolio.html">Portfolio</a></li>
             <li><a class="nav-item link" href="">Contacts</a></li>
           </ul>
         </nav>
@@ -49,6 +47,15 @@
             </li>
           </ul>
         </address>
+         <button
+          class="menu-toggle btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-toggle-icon" width="32" height="22">
+          <use href="./images/icons.svg#icon-menu-burger"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -80,7 +87,8 @@
               <a href="" class="products-img link">
                 <div class="img-wrap">
                   <img
-                    src="./images/banking-app.jpg"
+                  srcset="./images/banking-app@1x.jpg 1x, ./images/banking-app@2x.jpg 2x"
+                    src="./images/banking-app@1x.jpg"
                     alt="Purple app"
                     width="360"
                     height="300"
@@ -105,7 +113,8 @@
               <a href="" class="products-img link">
                 <div class="img-wrap">
                   <img
-                    src="./images/payment.jpg"
+                  srcset="./images/payment@1x.jpg 1x, ./images/payment@2x.jpg 2x"
+                    src="./images/payment@1x.jpg"
                     alt="Pay by phone"
                     width="360"
                     height="300"
@@ -128,7 +137,8 @@
               <a href="" class="products-img link">
                 <div class="img-wrap">
                   <img
-                    src="./images/meditation-app.jpg"
+                  srcset="./images/meditation-app@1x.jpg 1x, ./images/meditation-app@2x.jpg 2x"
+                    src="./images/meditation-app@1x.jpg"
                     alt="App on phone and laptop"
                     width="360"
                     height="300"
@@ -151,7 +161,8 @@
               <a href="" class="products-img link">
                 <div class="img-wrap">
                   <img
-                    src="./images/taxi.jpg"
+                  srcset="./images/taxi@1x.jpg 1x, ./images/taxi@2x.jpg 2x"
+                    src="./images/taxi@1x.jpg"
                     alt="The driver drives the car"
                     width="360"
                     height="300"
@@ -174,7 +185,8 @@
               <a href="" class="products-img link">
                 <div class="img-wrap">
                   <img
-                    src="./images/illustrations.jpg"
+                  srcset="./images/illustrations@1x.jpg 1x, ./images/illustrations@2x.jpg 2x"
+                    src="./images/illustrations@1x.jpg"
                     alt="Futuristic pictures"
                     width="360"
                     height="300"
@@ -197,7 +209,8 @@
               <a href="" class="products-img link">
                 <div class="img-wrap">
                   <img
-                    src="./images/courses.jpg"
+                  srcset="./images/courses@1x.jpg 1x, ./images/courses@2x.jpg 2x"
+                    src="./images/courses@1x.jpg"
                     alt="Young girl is studying on the phone while walking"
                     width="360"
                     height="300"
@@ -220,7 +233,8 @@
               <a href="" class="products-img link">
                 <div class="img-wrap">
                   <img
-                    src="./images/stories-concept.jpg"
+                  srcset="./images/stories-concept@1x.jpg 1x, ./images/stories-concept@2x.jpg 2x"
+                    src="./images/stories-concept@1x.jpg"
                     alt="Different font position design"
                     width="360"
                     height="300"
@@ -243,7 +257,8 @@
               <a href="" class="products-img link">
                 <div class="img-wrap">
                   <img
-                    src="./images/food.jpg"
+                  srcset="./images/food@1x.jpg 1x, ./images/food@2x.jpg 2x"
+                    src="./images/food@1x.jpg"
                     alt="A woman carries fruits"
                     width="360"
                     height="300"
@@ -266,7 +281,8 @@
               <a href="" class="products-img link">
                 <div class="img-wrap">
                   <img
-                    src="./images/coffee.jpg"
+                  srcset="./images/coffee@1x.jpg 1x, ./images/coffee@2x.jpg 2x"
+                    src="./images/coffee@1x.jpg"
                     alt="A man makes a cappuccino"
                     width="360"
                     height="300"
@@ -349,5 +365,66 @@
         </div>
       </div>
     </footer>
+
+    <!-- Mobile menu -->
+     <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle-close btn js-close-menu">
+        <svg class="menu-close-icon" width="8" height="8">
+        <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu-nav list">
+        <li><a href="./index.html" class="link">Studio</a></li>
+        <li><a href="./portfolio.html" class="link is-active">Portfolio</a></li>
+        <li><a href="" class="link">Contacts</a></li>
+      </ul>
+      <ul class="mobile-menu-contacts list">
+        <li>
+          <a class="link tel" href="tel:+110001111111">+11 (000) 111-11-11</a>
+        </li>
+        <li>
+          <a class="link email" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        </li>
+      </ul>
+      <ul class="mobile-menu-socials list">
+          <li class="menu-socials-item">
+            <a href="" class="menu-socials-link link">
+              <svg class="foot-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>              
+            </a>
+          </li>
+          <li class="menu-socials-item">
+            <a href="" class="menu-socials-link link">
+              <svg class="foot-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu-socials-item">
+            <a href="" class="menu-socials-link link">
+              <svg class="foot-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="menu-socials-item">
+            <a href="" class="menu-socials-link link">
+              <svg class="foot-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

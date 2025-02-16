@@ -26,7 +26,12 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-R0R93J54XP');
+  let userId = localStorage.getItem('userId') || 'guest_' + Math.random().toString(36).substring(2, 15);
+  localStorage.setItem('userId', userId);
+
+  gtag('config', 'G-R0R93J54XP', {
+    'user_id': userId  // Передача User-ID
+  });
 </script>
   </head>
   <body>

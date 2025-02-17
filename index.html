@@ -26,11 +26,37 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
+  // Генерація унікального User-ID
   let userId = localStorage.getItem('userId') || 'guest_' + Math.random().toString(36).substring(2, 15);
   localStorage.setItem('userId', userId);
 
+  // Отримання кількості відвідувань
+  let sessionCount = parseInt(localStorage.getItem('session_count')) || 0;
+  sessionCount++;
+  localStorage.setItem('session_count', sessionCount);
+
+  // Збереження часу початку сесії
+  let startTime = Date.now();
+
+  // Функція для розрахунку часу, проведеного на сайті
+  function sendTimeOnSite() {
+    let timeOnSite = Math.round((Date.now() - startTime) / 1000); // у секундах
+    gtag('event', 'time_on_site', {
+      'time_on_site': timeOnSite
+    });
+  }
+
+  // Відправлення даних при закритті вкладки або зміні сторінки
+  window.addEventListener('beforeunload', sendTimeOnSite);
+  window.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'hidden') {
+      sendTimeOnSite();
+    }
+  });
+
   gtag('config', 'G-R0R93J54XP', {
-    'user_id': userId  // Передача User-ID
+    'user_id': userId,  // Передача User-ID
+    'session_count': sessionCount
   });
 </script>
   </head>

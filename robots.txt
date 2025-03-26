@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /search/
+Disallow: /cart/
+
+Allow: /index.html
+Allow: /portfolio.html
+
+Sitemap: https://shtrvv.github.io/web-studio/sitemap.xml
